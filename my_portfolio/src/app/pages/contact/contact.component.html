@@ -1,0 +1,68 @@
+<div class="contact">
+<agm-map [latitude]="latitude" [longitude]="longitude" (mapClick)="onChoselocation($event)">
+<agm-marker [latitude]="latitude" [longitude]="longitude"></agm-marker>
+</agm-map>
+<br><br>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">     
+                <div class="text-center">
+                    <img class="profile" src="../assets/images/profile_pictures/Mpho3.jpeg">
+                    <br><br>
+                    <h4>Send Me An Email</h4>
+                </div>
+                <form [formGroup]="sendData">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input formControlName="name" type="text" class="form-control" id="name" placeholder="John Doe">
+                        <div class="errors" *ngIf="submitted && formValidate.name.errors">
+                            <div *ngIf="formValidate.name.errors.required">Name Is Required</div>
+                            <div *ngIf="formValidate.name.errors.pattern">Invalid Name</div>
+                        </div>
+                     </div>
+                     
+                    <div class="form-group">
+                       <label for="email">Email Address:</label>
+                       <input formControlName="email" type="text" class="form-control" id="email" placeholder="johndoe@gmail.com">
+                       <div class="errors" *ngIf="submitted && formValidate.email.errors">
+                        <div *ngIf="formValidate.email.errors.required">Email Is Required</div>
+                        <div *ngIf="formValidate.email.errors.pattern">Invalid Email Address</div>
+                       </div>
+                    </div>
+                   
+                    <div class="form-group">
+                        <label for="subject">Subject:</label>
+                        <input formControlName="subject" type="text" class="form-control" id="subject" placeholder="Employment">
+                        <div class="errors" *ngIf="submitted && formValidate.subject.errors">
+                            <div *ngIf="formValidate.subject.errors.required">subject Is Required</div>
+                            <div *ngIf="formValidate.subject.errors.pattern">Invalid subject</div>
+                        </div>
+                     </div>
+                    
+                     <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea formControlName="message" id="message" placeholder="Type your Message Here..."></textarea>
+                        <!-- <mat-hint align="end"> {{message.value?.length || 0}}/256</mat-hint> -->
+                        <div class="errors" *ngIf="submitted && formValidate.message.errors">
+                              <div *ngIf="formValidate.message.errors.required">Message Is Required</div>
+                              <div *ngIf="formValidate.message.errors.maxlength">Message Is Required</div>
+                        </div>
+                     </div>
+                     <div class="example-button-row mb-4 mt-4">
+                        <button (click)="submitMessage()" mat-raised-button color="primary">Send</button>
+                      </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+      
+
+
+
+
+
+
+</div>

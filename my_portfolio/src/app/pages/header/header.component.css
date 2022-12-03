@@ -1,0 +1,25 @@
+.container-fluid{
+    color: whitesmoke;
+}
+.bi{
+    color: rgba(165, 42, 42, 0.88);
+}
+a{
+    margin: 40px;
+}
+a, h1{
+    font-size: 30px;
+    background: whitesmoke;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: -webkit-linear-gradient(45deg, #7b4397 , #004e92);
+}
+a:hover,
+h2:hover{
+    background: whitesmoke;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: -webkit-linear-gradient(45deg, #3a1c71 , #d76d77, #ffaf7b);
+    font-size: 35px; 
+    cursor: pointer;
+}

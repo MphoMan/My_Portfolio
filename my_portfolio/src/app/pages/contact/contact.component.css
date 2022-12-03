@@ -1,0 +1,48 @@
+.contact{
+    display: flex;
+    margin: 5% 10% 5% 10%;
+    gap: 120px;   
+}
+agm-map{
+    height: 800px;
+    width: 100%;
+}
+.example-container mat-form-field + mat-form-field {
+    margin-left: 8px;
+}
+
+.card {
+    border: none;
+    width: 400px;
+    padding: 40px;
+    position: absolute;
+    right: 20%;
+    background: rgba(200,200,200, 01);
+}
+.profile{
+    border-radius: 50%;
+    height: 130px;
+    width: 130px;
+}
+input:focus,
+input:hover,
+textarea:focus,
+textarea:hover,
+label:focus,
+label:hover{
+    cursor: pointer;
+    border-color: green;
+}
+textarea{
+    width: 320px;
+    height: 150px;
+}
+.errors{
+    color: red;
+    font-weight: bold;
+}
+.example-button-row>button:hover{
+    background: #000;
+    color:gray
+}
+

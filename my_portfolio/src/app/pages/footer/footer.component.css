@@ -1,0 +1,32 @@
+.btn:hover{
+    font-size: 30px;
+    margin: 7px;
+}
+h1{
+    background: whitesmoke;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: -webkit-linear-gradient( #82208b , #878d32);
+    font-size: 30px;
+    /* text-transform: uppercase; */
+    text-align:center;
+}
+.scroll-to-top {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    opacity: 0;
+    transition: all .2s ease-in-out;
+}
+.show-scrollTop {
+    opacity: 1;
+    transition: all .2s ease-in-out;
+}
+.example-button-row{
+    float: right;
+    margin-right: 10px;
+}
+.text-center{
+    background-color: rgba(0, 0, 0, 0.8);
+}
+

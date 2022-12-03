@@ -1,0 +1,58 @@
+mat-grid-tile {
+    background: black;
+    color: white;
+}
+
+.example-card {
+    max-width: 900px;
+    margin-left:30px;
+    color: black;
+} 
+.example-button-row:hover,
+.col:hover{
+    transition: all 0.2s ease;
+    transform: scale(1.05);
+}
+.example-button-row>button:hover{
+    background-color: black;
+    color: blueviolet;
+    border-radius: 40%;
+}
+mat-card-title{
+    background: whitesmoke;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: -webkit-linear-gradient(50deg, orange, #7b4397 , #004e92);
+}
+mat-grid-list{
+    border-bottom: none;
+}
+h2{
+    background: whitesmoke;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: -webkit-linear-gradient(37deg, #210be1 , #61045f, #e3ee1f, orange);
+}
+p{ font-size: 18px;}
+.example-button-row{
+  margin-left: 45%;
+}
+.album{
+    background-color: black;
+}
+h1{
+    background: whitesmoke;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: -webkit-linear-gradient( #82208b , #878d32);
+    font-size: 40px;
+    text-transform: uppercase;
+    text-align:center;
+}
+.card{
+    width: 200px;
+}
+.images{
+    height:100px;
+}
+
