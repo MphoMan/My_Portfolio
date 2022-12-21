@@ -1,0 +1,160 @@
+<div class="main">
+
+    <div class="header">
+      <marquee behavior="" direction="right">
+        <h4><img src="../assets/images/sa-coronavirus-label.8099928a.svg" alt="" height="100px" width=""> For more information on the Coronavirus (COVID-19) visit <a href="https://sacoronavirus.co.za/">www.sacoronavirus.co.za</a></h4>
+      </marquee>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="text-center">
+                        <h1><a href="login">Sign In</a></h1>
+                        <h6>or<br>Register an account on the PSET Cloud.</h6>
+                    </div>
+                    <form [formGroup]="signup">
+                        <div class="form-group">
+                            <label for="exampleInputUsername">Username<span>*</span></label>
+                            <input formControlName="username" type="text" class="form-control" id="exampleInputUsername" aria-describedby="Username" placeholder="John Doe">
+
+                            <div class="errors" *ngIf="submitted && formValidate.username.errors">
+                              <div *ngIf="formValidate.username.errors.required">Username Is Required</div>
+                              <div *ngIf="formValidate.username.errors.pattern">Invalid Username</div>
+                            </div>
+                          </div>
+                        <div class="form-group">
+                          <label for="exampleInputEmail1">Email Address<span>*</span></label>
+                          <input formControlName="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="email@example.com">
+
+                          <div class="errors" *ngIf="submitted && formValidate.email.errors">
+                            <div *ngIf="formValidate.email.errors.required">Email Is Required</div>
+                            <div *ngIf="formValidate.email.errors.pattern">Invalid Email Address</div>
+                            <!-- <div *ngIf="submitted && signup.get('email').hasError('duplicateEmail')">
+                              * Email Id already exists !!
+                          </div> -->
+                          <!-- <div *ngIf="submitted && signup.get('email').hasError('duplicateEmail')">
+                              * Email Id already exists !!
+                          </div> -->
+
+                          </div>
+
+                          <div class="errors" *ngIf="emailValidate.invalid && emailValidate.touched">
+                            Email Is Invalid
+                          </div>
+
+                        </div>
+                        <div class="form-group">
+                          <label for="exampleInputPassword1">Password<span>*</span></label>
+                          <input formControlName="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password here!" minlength="8" [pattern]="password_pattern">
+
+                          <div class="errors" *ngIf="submitted && formValidate.password.errors">
+                            <div *ngIf="formValidate.password.errors.required">Password Is Required</div>
+                            <div *ngIf="formValidate.password.errors.minlength">Password Should At Least Be 8 Characters</div>
+                            <div *ngIf="formValidate.password.errors.pattern">Password ust have an Uppercase, special character, and a number</div>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Confirm Password<span>*</span></label>
+                            <input formControlName="confirmPassword" type="password" class="form-control" id="exampleInputPassword2" placeholder="Confirm Password here!">
+
+                            <div class="errors" *ngIf="submitted && formValidate.confirmPassword.errors">
+                              <div *ngIf="formValidate.confirmPassword.errors.required">Confirm Password Is Required</div>
+                              <div *ngIf="formValidate.confirmPassword.errors.MustMatch">Confirm Password Do Not Match</div>
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label for="exampleInputFirstname">First Name<span>*</span></label>
+                            <input formControlName="firstName" type="text" class="form-control" id="exampleInputFirstname" aria-describedby="Username here!" placeholder="John">
+
+                            <div class="errors" *ngIf="submitted && formValidate.firstName.errors">
+                              <div *ngIf="formValidate.firstName.errors.required">First Name Is Required</div>
+                              <div *ngIf="formValidate.firstName.errors.pattern">Invalid First Name</div>
+
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label for="exampleInputLastname">Last Name<span>*</span></label>
+                            <input formControlName="lastName" type="text" class="form-control" id="exampleInputLastname" aria-describedby="Username here!" placeholder="Doe">
+
+                            <div class="errors" *ngIf="submitted && formValidate.lastName.errors">
+                              <div *ngIf="formValidate.lastName.errors.required">Last Name Is Required</div>
+                              <div *ngIf="formValidate.lastName.errors.pattern">Invalid Last Name</div>
+                            </div>
+
+                          </div>
+                          <div class="form-group">
+                            <label class="mr-sm-2" for="inlineFormInterestType">Interest Type<span>*</span></label><br>
+                            <select formControlName="type" class="custom-select mr-sm-2" id="inlineFormInterestType" required>
+                                <option disabled selected >Choose</option>
+                                <option  value="LEARNER">LEARNER</option>
+                                <option value="JOB_SEEKER">JOB_SEEKER</option>
+                                <option value="EMPLOYER">EMPLOYER</option>
+                                <option value="EDUCATIONAL_INSTITUTE">EDUCATIONAL_INSTITUTION</option>
+                            </select>
+                          </div>
+
+                          <div class="errors" *ngIf="submitted && formValidate.type.errors">
+                            <div *ngIf="formValidate.type.errors.required">Type Is Required</div>
+                          </div>
+                          <br>
+                        <button (click)="signupSubmit()" type="submit" class="btn btn-primary">Register</button>
+                    </form><br>
+                    <!-- <a routerLink="/login">Click here to login</a> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br>
+    <div class="info">
+
+      <img src="../assets/images/psetcloud-logo.png" alt="" width="280"><br>
+
+    <h3>Once we start working together as equal partners, we start creating<br>a solid skills-based economy</h3><br>
+       <div class="first_two">
+      <div class="educators">
+        <img class="photos" src="https://psetcloud.org.za/siteworkspace/home-page-educators-1.jpg/@@images/e910e9f0-c994-47e0-be8a-4f794c1cc798.jpeg" alt="">
+        <h2>Educators</h2>
+
+        <h4>Improve the guidance of learners</h4>
+        <p>
+          The PSET CLOUD platform bridges the gap between all<br>
+           players in the post-school education and training worlds.<br>
+           It enables educators to guide learners towards<br>
+          opportunities and to offer guidance informed by data.
+        </p>
+
+      </div>
+      <div class="learners">
+        <img class="photos" src="https://psetcloud.org.za/siteworkspace/home-page-learners-2-1.jpg/@@images/e4f50124-a5c8-44e7-99a8-ebe2fd0ad9c4.jpeg" alt="">
+        <h2>Learners</h2>
+
+        <h4>Quickly match with opportunities</h4>
+        <p>
+          A big problem is that learners often pursue studies in<br>
+           saturated fields and then struggle to find employment.<br>
+           PSET CLOUD helps learners to see where the gaps are<br>
+           and what opportunities would be best to pursue.
+        </p>
+      </div>
+
+      <div class="employers">
+        <img class="photos" src="https://psetcloud.org.za/siteworkspace/home-page-employers-1.jpg/@@images/9845bec2-9300-46a3-9ce7-ff8675830bff.jpeg" alt="">
+        <h2>Employers</h2>
+
+        <h4>Experience greater efficiency and<br> reduced costs</h4>
+        <p>
+          The PSET CLOUD platform offers valuable and accurate<br>
+          data that empowers informed decision making and future<br>
+           planning. This is a collaborative tool that helps to connect<br>
+            key players.
+        </p>
+
+      </div>
+
+      </div>
+
+
+    </div>
+</div>

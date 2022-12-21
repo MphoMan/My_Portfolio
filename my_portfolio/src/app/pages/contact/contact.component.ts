@@ -23,6 +23,7 @@ export class ContactComponent implements OnInit {
 
   sendData: any = FormGroup;
   submitted: boolean = false; // avoid form from submitting
+ responseMessage?: string;
   
   
 
@@ -35,23 +36,42 @@ export class ContactComponent implements OnInit {
       email: ['', Validators.compose([Validators.required, 
               Validators.email,Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$')])],
     subject: new FormControl(null, [Validators.required]),
-    message: new FormControl(null, [Validators.required, Validators.maxLength(256)])
+    message: new FormControl(null, [Validators.required, Validators.maxLength(256)]),
+   responseMessage: this.responseMessage
 
      })
   }
 
-  get formValidate(){
+get formValidate(){
     return this.sendData.controls;
-  }
+}
 
-  get emailValidate(){
-    return this.sendData.get('email');
-  }
+get nameValidate(){
+  return this.sendData.get('name')
+}
+get emailValidate(){
+   return this.sendData.get('email');
+}
+get subjectValidate(){
+  return this.sendData.get('subject')
+}
+get messageValidate(){
+  return this.sendData.get('message')
+}
+  
 
   submitMessage(){
  
     this.submitted= true;
-    // alert("Thank you, i'll get back to you as soon as possible.");
+    // if(!(this.nameValidate.value ==="" || this.emailValidate.value ==="" || this.subjectValidate.value ==="" || this.messageValidate.value ==="")){
+    //   this.responseMessage= "Thank you "+ this.nameValidate.value +" for sending a message, i'll get back to you soon.";
+    //   // alert(this.responseMessage);
+    //   console.log(this.nameValidate.value);
+    // }
+   
+  
+    
+    
    
    
   }

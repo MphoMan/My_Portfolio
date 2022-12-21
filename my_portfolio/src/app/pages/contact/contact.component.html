@@ -13,10 +13,10 @@
                     <br><br>
                     <h4>Send Me An Email</h4>
                 </div>
-                <form [formGroup]="sendData">
+                <form [formGroup]="sendData" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSchaa88-3A_IlhbnO1gu-dYK0L5M9HIEVsjvgUsccUFiVx5Dg/formResponse" method="post" target="_self">
                     <div class="form-group">
                         <label for="name">Name:</label>
-                        <input formControlName="name" type="text" class="form-control" id="name" placeholder="John Doe">
+                        <input formControlName="name" type="text" class="form-control" id="name" placeholder="John Doe" name="entry.1709962606">
                         <div class="errors" *ngIf="submitted && formValidate.name.errors">
                             <div *ngIf="formValidate.name.errors.required">Name Is Required</div>
                             <div *ngIf="formValidate.name.errors.pattern">Invalid Name</div>
@@ -25,7 +25,7 @@
                      
                     <div class="form-group">
                        <label for="email">Email Address:</label>
-                       <input formControlName="email" type="text" class="form-control" id="email" placeholder="johndoe@gmail.com">
+                       <input formControlName="email" type="text" class="form-control" id="email" placeholder="johndoe@gmail.com" name="entry.1042042214">
                        <div class="errors" *ngIf="submitted && formValidate.email.errors">
                         <div *ngIf="formValidate.email.errors.required">Email Is Required</div>
                         <div *ngIf="formValidate.email.errors.pattern">Invalid Email Address</div>
@@ -34,7 +34,7 @@
                    
                     <div class="form-group">
                         <label for="subject">Subject:</label>
-                        <input formControlName="subject" type="text" class="form-control" id="subject" placeholder="Employment">
+                        <input formControlName="subject" type="text" class="form-control" id="subject" placeholder="Employment" name="entry.21444001">
                         <div class="errors" *ngIf="submitted && formValidate.subject.errors">
                             <div *ngIf="formValidate.subject.errors.required">subject Is Required</div>
                             <div *ngIf="formValidate.subject.errors.pattern">Invalid subject</div>
@@ -43,12 +43,15 @@
                     
                      <div class="form-group">
                         <label for="message">Message:</label>
-                        <textarea formControlName="message" id="message" placeholder="Type your Message Here..."></textarea>
+                        <textarea formControlName="message" id="message" placeholder="Type your Message Here..." name="entry.41635256"></textarea>
                         <!-- <mat-hint align="end"> {{message.value?.length || 0}}/256</mat-hint> -->
                         <div class="errors" *ngIf="submitted && formValidate.message.errors">
                               <div *ngIf="formValidate.message.errors.required">Message Is Required</div>
                               <div *ngIf="formValidate.message.errors.maxlength">Message Is Required</div>
                         </div>
+                     </div>
+                     <div class="success">
+                        <span>{{responseMessage}}</span>
                      </div>
                      <div class="example-button-row mb-4 mt-4">
                         <button (click)="submitMessage()" mat-raised-button color="primary">Send</button>

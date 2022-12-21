@@ -4,7 +4,7 @@
     gap: 120px;   
 }
 agm-map{
-    height: 800px;
+    height: 700px;
     width: 100%;
 }
 .example-container mat-form-field + mat-form-field {
@@ -40,6 +40,10 @@ textarea{
 .errors{
     color: red;
     font-weight: bold;
+}
+.success{
+    color: green;
+    font-weight: bolder;
 }
 .example-button-row>button:hover{
     background: #000;

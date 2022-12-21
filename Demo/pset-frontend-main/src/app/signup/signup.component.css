@@ -1,0 +1,106 @@
+/* .main{
+    position:fixed;  
+} */
+
+.header{
+    top: 0px;
+    padding-top: -10px;
+    height: 110px;
+    line-height: 100px;
+    width: 100%;
+    background: rgba(128, 128, 128, 0.9);
+    color: black;
+    margin-bottom: 10px;
+}
+label{
+    color:black;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.card {
+    /* position:fixed; */
+    margin-top: -110px;
+    border: none;
+    width: 400px;
+    padding: 40px;
+    /* height: 90%; */
+    position: absolute;
+    top: 0px;
+    left: 88%;
+    transform: translate(-50%,45%);
+    background: rgba(200,200,200, 01);
+}
+a{
+    font-size:15px;
+    text-decoration: none;
+    
+}
+
+a:hover, a:focus{
+    color: white;
+    font-size: 25px;
+    transition: color 0.5s ease;
+    text-decoration: underline;
+}
+h5{
+    color: black;
+}
+
+span{
+    color: red;
+    font-weight: bolder;
+}
+select{
+    width:100%;
+    height: 40px;
+}
+button{
+    background-color: black;
+    margin-left: 40%;
+    /* padding: 5px; */
+}
+
+button:hover, button:focus{
+    color: blue;
+    background-color: white;
+    transition: background-color, color 0.5s ease;
+}
+button:disabled{
+    cursor: not-allowed;
+}
+.errors {
+    color: red;
+    font-family: bolder;
+    font-size: 17px;
+    padding-left: 5px;
+}
+input:invalid{
+    border-color:red ;
+}
+
+.info{
+    padding-top: -5px;
+    margin-left: 100px;
+}
+.info>h3{
+    color: royalblue;
+}
+.first_two{
+    display: flex;
+    padding: 10px;
+}
+.learners{
+    margin-left: 35px;;
+}
+.employers{
+    margin-left: 70px;
+}
+/* .photos_employers{
+    width: 250px;
+    height: 60px;
+} */
+.photos{
+    width: 390px;
+    height: 350px;
+}

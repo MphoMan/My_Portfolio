@@ -1,0 +1,44 @@
+<div class="info">
+
+  <img src="../assets/images/psetcloud-logo.png" alt="" width="280"><br>
+</div>
+
+<div class="container">
+  <div class="row">
+     <div class="col-md-6">
+        <div class="card">
+          <h1><a href="/login">Please Sign In</a></h1>
+            <div class="text-center">
+            </div>
+            <form [formGroup]="login">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Username <span>*</span></label>
+                    <input formControlName="username" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="John Doe" required>
+
+                  <div class="errors" *ngIf="submitted && formValidate.username.errors">
+                    <div *ngIf="formValidate.username.errors.required">Username Is Required</div>
+                    </div>
+
+                  </div>
+                  <br>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Password<span>*</span></label>
+                    <input formControlName="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter Password here!" required>
+
+                  <div class="errors" *ngIf="submitted && formValidate.password.errors">
+                    <div *ngIf="formValidate.password.errors.required">Password Is Required</div>
+                    </div>
+                  </div>
+                  <br>
+                  <!-- <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Remember me</label>
+                  </div> -->
+                  <button (click)="loginSubmit()" type="submit" class="btn btn-primary">Login</button>
+            </form>
+
+        </div>
+     </div>
+
+</div>
+</div>
