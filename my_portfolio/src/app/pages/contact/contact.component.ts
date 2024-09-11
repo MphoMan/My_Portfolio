@@ -11,14 +11,14 @@ import { HttpClient, HttpClientModule } from "@angular/common/http";
 })
 export class ContactComponent implements OnInit {
 
-  latitude = 51.678418;
-  longitude = 7.809007;
-  // locationChosen = false; avoiding default location
-
-  onChoselocation(event: any){
+  latitude = -25.9777996;  // Set live latitude
+  longitude = 28.217574;   // Set live longitude
+  // locationChosen = false; // Avoiding default location
+  
+  onChoselocation(event: any) {
     this.latitude = event.coords.lat;
     this.longitude = event.coords.lng;
-    // this.locationChosen = true; when selected on the map
+    // this.locationChosen = true; // when a new location is selected on the map
   }
 
   sendData: any = FormGroup;
